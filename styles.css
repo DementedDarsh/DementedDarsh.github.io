@@ -1,0 +1,280 @@
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "article nav"
+    "footer nav";
+  grid-template-rows: 10% 60% 15%;  
+  grid-template-columns: 1500px 300px;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  height: 100vh;
+  margin: 0% 15%;
+  background: linear-gradient(rgb(27, 27, 27), rgb(0, 0, 0));
+    font-family: 'Skranji', cursive;
+  }  
+header, footer, article, nav, div {
+  padding: 0;
+  color: gold;
+  }
+
+.startgame {
+  background-color: rgba(0, 0, 0, 0.664);
+  font-size: large;
+  padding: 20px;
+}
+
+#Skills {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.ingame {
+  display: none;
+}
+
+.ingame2 {
+  display: none;
+}
+
+#pageHeader {
+  grid-area: header;
+  font-family: 'Lilita One', cursive;
+  font-size: xx-large;
+  color: gold;
+  text-align: center;
+  margin: 0px;
+  background-image: url("stone.png");
+  padding-top: 23px;
+  border-style: double;
+  border-color: gold;
+  }
+#pageFooter {
+  grid-area: footer;
+  }
+#Battle { 
+  grid-area: article;
+  font-family: 'Skranji', cursive;
+  font-size: 25px;      
+  color: #ffc000;
+  background-image: url("cavebackground.jpg");
+  background-size: contain;
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  }
+#mainNav { 
+  grid-area: nav; 
+  padding: 10px;
+  line-height: 25px;
+  }
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "footer"
+      "nav";
+    grid-template-rows: 80px 1fr 70px 1fr;  
+    grid-template-columns: 1fr;
+ }
+}
+
+/* Health Bar Stuff*/
+#monster-HPBar {
+	background-color: #ff0000;
+	border-radius: 5px;
+  border: 2px solid;
+  border-color: black;
+	position: relative;
+	margin: auto;
+  margin-top: 10%;
+	height: 30px;
+	width: 300px;
+}
+
+#monsterHP {
+	background: linear-gradient(to left, #32dd49, #1afa05);
+	border-radius: 3px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+  position: absolute;
+	transition: width 0.5s;
+}
+
+#monsterHPNumber{
+  color: #000;
+  position: absolute;
+  align-items: center;
+  margin-left: 105px;
+  margin-right: 105px;
+}
+
+.player-HPBar {
+	background-color: #ff0000;
+  border: 2px solid;
+  border-color: black;
+	position: relative;
+	height: 30px;
+	width: 1496px;
+
+}
+
+#playerHP {
+	background: linear-gradient(to left, #32dd49, #1afa05);
+  border-color: black;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	transition: width 0.5s;
+}
+
+#playerHPNumber{
+  color: #000;
+  position: absolute;
+  align-items: center;
+  font-family: 'Skranji', cursive;
+  margin-left: 748px;
+  margin-top: -25px;
+}
+
+.monster {
+  position: absolute;
+  bottom: 10%;
+  margin-left: -10%;
+}
+/*Button Stuff. */
+.btn-home{
+  margin: 30px auto;
+  width: 250px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  font-family: 'Skranji', cursive;
+  color: #ffc000;
+  font-size: 18px;
+  font-weight: 400;
+  text-shadow: 0 1px 3px #000;
+  text-align: center;
+  padding: 10px 0;
+  background: radial-gradient(circle, #8b0000, #8b0000);
+  border-top: 4px ridge #ffb000;
+  border-left: 4px groove #ffb000;
+  border-right: 4px ridge #ffb000;
+  border-bottom: 4px groove #ffb000;
+  box-shadow: inset 0px 0px 5px 3px rgba(1,1,1,0.3);
+  position: relative;
+}
+
+.btn-home:hover{
+  background: radial-gradient(circle, #e52b2b, #8b0000);
+  box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+
+.btn-home:active{
+  background: radial-gradient(circle, #ec6a6a, #e52b2b);
+  box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Skranji', cursive;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  opacity: 0;
+  transition: opacity 1s;
+  font-family: 'Skranji', cursive;
+  padding: 10px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.9;
+  
+}
+
+.skills:not(#weapontooltip):hover{
+  box-shadow: 0px 0 10px 10px rgb(212, 196, 49)
+}
+
+.tooltip #weapontooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  opacity: 0;
+  transition: opacity 1s;
+  font-family: 'Skranji', cursive;
+  padding: 10px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover #weapontooltiptext {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+
+.skills {
+  height: 100px;
+  margin: auto;
+}
+
+.Skills {
+  margin: 50px;
+}
+
+#weapon {
+  height: 120px;
+  transition: opacity 1s ease-in-out;
+}
+
+#weaponName {
+  width: 120px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skillList {
+  margin-top: 10px ;
+  display: flex;
+  justify-content: center;
+}

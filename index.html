@@ -1,0 +1,39 @@
+<!doctype html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Skranji:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">  
+<title>Jimbo Bomb and the Ever-changing Thingy</title>
+<script src="app.js" defer></script>
+<head><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header id="pageHeader">JIMBO BOB AND THE QUEST ADVENTURE OF EVER-CHANGING THINGY</header>
+  <article id="Battle"><div class = "startgame">Your name is Jimbo Bob, you were venturing inside an ancient cave one day when you found an ornate box. You open it and a bright light fills the caves, and revealing a peculiar artifact inside. You lay your fingers on the artifact and a surge of knowledge fills your mind. At the same time, the artifact transforms into a peculiar weapon. It continues transforming, seemingly at random.
+  </br>
+  </br> 
+  You pick the transforming weapon up, and as you do, you hear the most terrifying sound you have ever heard in your life. It was a guttural groan, one that would make the staunchest of men tremble. You turn around, equipped with your new toy, and come face-to-face with... 
+</br>
+</br> 
+  (Your weapon changes every turn, mouse-over the weapon icon on the left and determine which skill makes full use of your current weapon. Good luck!)
+</br>
+</br> 
+  P.S. Not really good luck because RNG is minimal in this "game".
+    <div class="btn-home" onclick="startGame()">To battle!</div></div>
+
+    <div class = "ingame"><div>Regular Slime</div><div id = "monster-HPBar"><div id = "monsterHP"></div><div id = "monsterHPNumber">250/250</div></div><img class="monster" src="slime.png" alt="Slime" width="20%"></div></div>
+  </article>
+  <nav id="mainNav"></nav>
+  <footer id="Skills"><div class = "ingame2"><div class = "player-HPBar"><div id = "playerHP"></div><div id = "playerHPNumber">100/100</div></div>
+    <span id = "skillList">
+    <span class="Weapon"><span class = "tooltip" id = "weapontooltip"><img id = "weapon"><div id = "weaponName"></div><span id ="weapontooltiptext"></span></span></span>
+  
+    <span class="Skills"></span><span class = "tooltip"><img class = "skills" src="sword-wound.png" onclick="charge()"><div>Charged Attack</div><span class="tooltiptext">Unleash a single devastating attack that does two times normal damage</span></span>
+    <span class="Skills"></span><span class = "tooltip"><img class = "skills" src="scorpion-tail.png" onclick="poison()"><div>Poison Strike</div><span class="tooltiptext">Coat your weapon in poison, critical hits will deal even more damage than usual.</span></span>
+    <span class="Skills"></span><span class = "tooltip"><img class = "skills" src="fire-zone.png" onclick="fire()"><div>Imbue: Fire</div><span class="tooltiptext">Imbue your weapon with fire, dealing additional fire damage on each hit.</span></span>
+    <span class="Skills"></span><span class = "tooltip"><img class = "skills" src="crosshair.png" onclick="aim()"><div>Lock-on</div><span class="tooltiptext">An aimed attack that guarantees a hit on the enemy.</span></span>
+    <span class="Skills"></span><span class = "tooltip"><img class = "skills" src="tear-tracks.png" onclick="cry()"><div>Just Cry</div><span class="tooltiptext">You don&rsquo;t know what to do, so you just cry pitifully</span></span>
+  </span>
+  </div>
+  </footer>
+</body>
+
