@@ -123,9 +123,11 @@ const enemyHit = () => {
   endGame();}
 }
 
+
+
 const winTheGame = () => {
-  alert("A winner is you! Refresh the page to play again.")
-  endGame();}
+  setTimeout(alert("A winner is you! Refresh the page to play again."), 1000);
+  setTimeout(endGame, 1000);}
 
 const endGame = () => {
   let y = document.querySelector(".ingame2");
