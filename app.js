@@ -119,12 +119,16 @@ const enemyHit = () => {
   { player.currentHp = 0;
     player.display.style.width = `${player.currentHp*100 / player.hp}%`;
     player.displayValue.innerText = `${player.currentHp}`+"/"+ `${player.hp}`;
-    alert("YOU DIED. Refresh to attempt again.");
-  endGame();}
+    setTimeout(loseMessage, 500);
+    setTimeout(endGame, 500);}
 }
 
 const winMessage = () =>{
   alert("A winner is you! Refresh the page to play again.")
+}
+
+const loseMessage = () =>{
+  alert("YOU DIED. Refresh to attempt again.")
 }
 
 const winTheGame = () => {
