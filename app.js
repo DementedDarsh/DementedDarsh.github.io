@@ -169,7 +169,7 @@ const charge = () => {
       {
         renderCombatHitMiss()
       }
-    if (monster.currentHp <= 0)
+    if (monster.currentHp <= 0 && player.currentHp > 0)
     {winTheGame()}
     }
     enemyHit()
@@ -206,7 +206,7 @@ const poison = () => {
     {
       renderCombatHitMiss()
     }
-  if (monster.currentHp <= 0)
+  if (monster.currentHp <= 0 && player.currentHp > 0)
   {winTheGame()}
   }
   
@@ -245,7 +245,7 @@ const fire = () => {
     {
       renderCombatHitMiss()
     }
-  if (monster.currentHp <= 0)
+  if (monster.currentHp <= 0 && player.currentHp > 0)
   {winTheGame()}
   }
   
@@ -279,7 +279,7 @@ const aim = () => {
       renderMonsterHP()
     }
 
-  if (monster.currentHp <= 0)
+  if (monster.currentHp <= 0 && player.currentHp > 0)
   {winTheGame()}
   }
   
@@ -308,7 +308,7 @@ const cry = () => {
     log.appendChild(enemyDamageTakenText);
     combatLog.appendChild(log);
   }
-  if (monster.currentHp <= 0)
+  if (monster.currentHp <= 0 && player.currentHp > 0)
   {winTheGame()}
   else{
   enemyHit()
