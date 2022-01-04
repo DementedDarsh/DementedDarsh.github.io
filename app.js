@@ -283,7 +283,7 @@ const aim = () => {
     }
 
   }
-  if(monster.hp > 0){
+  if(monster.currentHp > 0){
     enemyHit()
     randomWeapon()}
 }
