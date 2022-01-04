@@ -37,6 +37,12 @@ header, footer, article, nav, div {
 .ingame2 {
   display: none;
 }
+.losegame {
+  display: none;
+  transition: 1s;
+  background-size: cover;
+  background-image: url("https://i.kym-cdn.com/entries/icons/facebook/000/029/198/Dark_Souls_You_Died_Screen_-_Completely_Black_Screen_0-2_screenshot.jpg");
+}
 
 #pageHeader {
   grid-area: header;
@@ -139,6 +145,7 @@ header, footer, article, nav, div {
 	width: 100%;
 	opacity: 1;
 	transition: width 0.5s;
+  transition-delay: 0.5s;
 }
 
 #playerHPNumber{
