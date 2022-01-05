@@ -9,7 +9,7 @@ body {
   grid-row-gap: 0;
   grid-column-gap: 0;
   height: 100vh;
-  margin: 0% 0%;
+  margin: 0% auto;
   background: linear-gradient(rgb(27, 27, 27), rgb(0, 0, 0));
     font-family: 'Skranji', cursive;
   }  
